@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Week {
+    
+   var days: [Day]
+    
+    init(days: [Day]) {
+          self.days = days
+      }
+    
+}

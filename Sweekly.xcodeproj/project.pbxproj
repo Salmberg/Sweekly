@@ -14,6 +14,16 @@
 		CB5DC8422B73F07D005DD431 /* SweeklyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8412B73F07D005DD431 /* SweeklyTests.swift */; };
 		CB5DC84C2B73F07D005DD431 /* SweeklyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC84B2B73F07D005DD431 /* SweeklyUITests.swift */; };
 		CB5DC84E2B73F07D005DD431 /* SweeklyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC84D2B73F07D005DD431 /* SweeklyUITestsLaunchTests.swift */; };
+		CB5DC85E2B73F443005DD431 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC85D2B73F443005DD431 /* Week.swift */; };
+		CB5DC8602B73F4E7005DD431 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC85F2B73F4E7005DD431 /* Day.swift */; };
+		CB5DC8622B73F532005DD431 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8612B73F532005DD431 /* Task.swift */; };
+		CB5DC8642B73F5A7005DD431 /* WeeklyPlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8632B73F5A7005DD431 /* WeeklyPlannerViewModel.swift */; };
+		CB5DC86A2B73F84D005DD431 /* WeeklyPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */; };
+		CB5DC86C2B73F8FF005DD431 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86B2B73F8FF005DD431 /* DayView.swift */; };
+		CB5DC86E2B73F947005DD431 /* DailyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */; };
+		CB5DC8702B73FA84005DD431 /* DailyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86F2B73FA84005DD431 /* DailyDetailViewModel.swift */; };
+		CB5DC8722B7558B5005DD431 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8712B7558B5005DD431 /* AddTaskView.swift */; };
+		CB5DC8742B7567EF005DD431 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8732B7567EF005DD431 /* AddTaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,16 @@
 		CB5DC8472B73F07D005DD431 /* SweeklyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweeklyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5DC84B2B73F07D005DD431 /* SweeklyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweeklyUITests.swift; sourceTree = "<group>"; };
 		CB5DC84D2B73F07D005DD431 /* SweeklyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweeklyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB5DC85D2B73F443005DD431 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		CB5DC85F2B73F4E7005DD431 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		CB5DC8612B73F532005DD431 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CB5DC8632B73F5A7005DD431 /* WeeklyPlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlannerViewModel.swift; sourceTree = "<group>"; };
+		CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlannerView.swift; sourceTree = "<group>"; };
+		CB5DC86B2B73F8FF005DD431 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailView.swift; sourceTree = "<group>"; };
+		CB5DC86F2B73FA84005DD431 /* DailyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailViewModel.swift; sourceTree = "<group>"; };
+		CB5DC8712B7558B5005DD431 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		CB5DC8732B7567EF005DD431 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +114,9 @@
 		CB5DC82F2B73F079005DD431 /* Sweekly */ = {
 			isa = PBXGroup;
 			children = (
+				CB5DC85A2B73F31F005DD431 /* Model */,
+				CB5DC85B2B73F338005DD431 /* ViewModel */,
+				CB5DC85C2B73F384005DD431 /* View */,
 				CB5DC8302B73F079005DD431 /* SweeklyApp.swift */,
 				CB5DC8322B73F079005DD431 /* ContentView.swift */,
 				CB5DC8342B73F07D005DD431 /* Assets.xcassets */,
@@ -125,6 +148,37 @@
 				CB5DC84D2B73F07D005DD431 /* SweeklyUITestsLaunchTests.swift */,
 			);
 			path = SweeklyUITests;
+			sourceTree = "<group>";
+		};
+		CB5DC85A2B73F31F005DD431 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DC85D2B73F443005DD431 /* Week.swift */,
+				CB5DC85F2B73F4E7005DD431 /* Day.swift */,
+				CB5DC8612B73F532005DD431 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB5DC85B2B73F338005DD431 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DC8632B73F5A7005DD431 /* WeeklyPlannerViewModel.swift */,
+				CB5DC86F2B73FA84005DD431 /* DailyDetailViewModel.swift */,
+				CB5DC8732B7567EF005DD431 /* AddTaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB5DC85C2B73F384005DD431 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */,
+				CB5DC86B2B73F8FF005DD431 /* DayView.swift */,
+				CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */,
+				CB5DC8712B7558B5005DD431 /* AddTaskView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5DC8722B7558B5005DD431 /* AddTaskView.swift in Sources */,
+				CB5DC8742B7567EF005DD431 /* AddTaskViewModel.swift in Sources */,
+				CB5DC8642B73F5A7005DD431 /* WeeklyPlannerViewModel.swift in Sources */,
+				CB5DC86E2B73F947005DD431 /* DailyDetailView.swift in Sources */,
+				CB5DC86C2B73F8FF005DD431 /* DayView.swift in Sources */,
 				CB5DC8332B73F079005DD431 /* ContentView.swift in Sources */,
+				CB5DC86A2B73F84D005DD431 /* WeeklyPlannerView.swift in Sources */,
 				CB5DC8312B73F079005DD431 /* SweeklyApp.swift in Sources */,
+				CB5DC8622B73F532005DD431 /* Task.swift in Sources */,
+				CB5DC8602B73F4E7005DD431 /* Day.swift in Sources */,
+				CB5DC85E2B73F443005DD431 /* Week.swift in Sources */,
+				CB5DC8702B73FA84005DD431 /* DailyDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

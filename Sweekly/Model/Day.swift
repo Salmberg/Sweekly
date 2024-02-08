@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+
+struct Day: Identifiable {
+    var id: Date { date }
+    var name: String
+    var date: Date
+    var tasks: [Task]
+    
+    
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d" // "d" ger dagens nummer
+        return formatter.string(from: date)
+    }
+}

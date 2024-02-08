@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DayView: View {
+    var day: Day
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(day.name)
+            // Visa andra daginformation om det behövs
+        }
     }
 }
 
-#Preview {
-    DayView()
-}

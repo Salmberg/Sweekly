@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct AddTaskView: View {
+    @ObservedObject var viewModel: AddTaskViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Enter task title", text: $viewModel.taskTitle)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+
+            Button("Add Task") {
+                viewModel.addTask()
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(8)
+        }
+        .padding()
+        .navigationTitle("Add Task")
     }
 }
 
-#Preview {
-    AddTaskView()
-}
