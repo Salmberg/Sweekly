@@ -20,6 +20,12 @@ class DailyDetailViewModel: ObservableObject {
         guard let selectedDay = selectedDay else { return }
 
     }
+    
+    func toggleTaskCompletion(_ task: Task) {
+        if let index = tasks.firstIndex(of: task) {
+            tasks[index].completed.toggle()
+        }
+    }
 
     // Formatter för att hämta dagens namn
     private let dayNameFormatter: DateFormatter = {

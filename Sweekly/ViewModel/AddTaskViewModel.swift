@@ -9,10 +9,28 @@ import Foundation
 
 class AddTaskViewModel: ObservableObject {
     @Published var taskTitle: String = ""
+    @Published var taskDescription: String = ""
+    @Published var tasks: [Task] = []
+    
+    var onAddTask: ((Task) -> Void)
+
+    init(onAddTask: @escaping (Task) -> Void) {
+        self.onAddTask = onAddTask
+    }
 
     func addTask() {
-        // Här kan du använda taskTitle för att lägga till uppgiften i din modell eller var du sparar dina uppgifter
-        print("Adding task: \(taskTitle)")
-        // Lägg till ditt logik för att spara uppgiften här
+        guard !taskTitle.isEmpty else {
+            return
+        }
+
+        let newTask = Task(title: taskTitle, description: taskDescription)
+        tasks.append(newTask)
+
+        onAddTask(newTask)
+
+        taskTitle = ""
+        taskDescription = ""
     }
 }
+
+

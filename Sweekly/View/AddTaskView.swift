@@ -21,11 +21,17 @@ struct AddTaskView: View {
             }
             .padding()
             .foregroundColor(.white)
-            .background(Color.blue)
+            .background(Color.black)
             .cornerRadius(8)
+
+            List(viewModel.tasks, id: \.self) { task in
+                            Text(task.title)
+                        }
+
         }
         .padding()
         .navigationTitle("Add Task")
+        
     }
 }
 
