@@ -19,11 +19,11 @@
 		CB5DC8622B73F532005DD431 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8612B73F532005DD431 /* Task.swift */; };
 		CB5DC8642B73F5A7005DD431 /* WeeklyPlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8632B73F5A7005DD431 /* WeeklyPlannerViewModel.swift */; };
 		CB5DC86A2B73F84D005DD431 /* WeeklyPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */; };
-		CB5DC86C2B73F8FF005DD431 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86B2B73F8FF005DD431 /* DayView.swift */; };
 		CB5DC86E2B73F947005DD431 /* DailyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */; };
 		CB5DC8702B73FA84005DD431 /* DailyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC86F2B73FA84005DD431 /* DailyDetailViewModel.swift */; };
 		CB5DC8722B7558B5005DD431 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8712B7558B5005DD431 /* AddTaskView.swift */; };
 		CB5DC8742B7567EF005DD431 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8732B7567EF005DD431 /* AddTaskViewModel.swift */; };
+		CB5DC8762B7A2E98005DD431 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8752B7A2E98005DD431 /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +59,11 @@
 		CB5DC8612B73F532005DD431 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CB5DC8632B73F5A7005DD431 /* WeeklyPlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlannerViewModel.swift; sourceTree = "<group>"; };
 		CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlannerView.swift; sourceTree = "<group>"; };
-		CB5DC86B2B73F8FF005DD431 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailView.swift; sourceTree = "<group>"; };
 		CB5DC86F2B73FA84005DD431 /* DailyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailViewModel.swift; sourceTree = "<group>"; };
 		CB5DC8712B7558B5005DD431 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		CB5DC8732B7567EF005DD431 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		CB5DC8752B7A2E98005DD431 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				CB5DC8692B73F84D005DD431 /* WeeklyPlannerView.swift */,
-				CB5DC86B2B73F8FF005DD431 /* DayView.swift */,
 				CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */,
 				CB5DC8712B7558B5005DD431 /* AddTaskView.swift */,
+				CB5DC8752B7A2E98005DD431 /* TaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,9 +315,9 @@
 				CB5DC8742B7567EF005DD431 /* AddTaskViewModel.swift in Sources */,
 				CB5DC8642B73F5A7005DD431 /* WeeklyPlannerViewModel.swift in Sources */,
 				CB5DC86E2B73F947005DD431 /* DailyDetailView.swift in Sources */,
-				CB5DC86C2B73F8FF005DD431 /* DayView.swift in Sources */,
 				CB5DC8332B73F079005DD431 /* ContentView.swift in Sources */,
 				CB5DC86A2B73F84D005DD431 /* WeeklyPlannerView.swift in Sources */,
+				CB5DC8762B7A2E98005DD431 /* TaskView.swift in Sources */,
 				CB5DC8312B73F079005DD431 /* SweeklyApp.swift in Sources */,
 				CB5DC8622B73F532005DD431 /* Task.swift in Sources */,
 				CB5DC8602B73F4E7005DD431 /* Day.swift in Sources */,

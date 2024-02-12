@@ -10,6 +10,8 @@ import Foundation
 class AddTaskViewModel: ObservableObject {
     @Published var taskTitle: String = ""
     @Published var taskDescription: String = ""
+    @Published var selectedHour: Int = 0
+    @Published var selectedMinute: Int = 0
     @Published var tasks: [Task] = []
     
     var onAddTask: ((Task) -> Void)
@@ -23,14 +25,20 @@ class AddTaskViewModel: ObservableObject {
             return
         }
 
-        let newTask = Task(title: taskTitle, description: taskDescription)
+        let newTask = Task(title: taskTitle, description: taskDescription, hour: selectedHour, minute: selectedMinute)
         tasks.append(newTask)
 
         onAddTask(newTask)
 
         taskTitle = ""
         taskDescription = ""
+        selectedHour = 0
+        selectedMinute = 0
     }
 }
+
+
+
+
 
 

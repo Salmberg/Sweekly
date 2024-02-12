@@ -12,53 +12,55 @@ struct DailyDetailView: View {
     @ObservedObject var viewModel: DailyDetailViewModel
     @Environment(\.presentationMode) var presentationMode
     @State private var isAddTaskViewPresented = false
+    var day: Day
 
     var body: some View {
-        
-        VStack {
-                    ForEach(viewModel.tasks) { task in
-                        Button(action: {
-                            viewModel.toggleTaskCompletion(task)
-                        }) {
-                            HStack {
-                                Image(systemName: task.completed ? "checkmark.square" : "square")
-                                    .foregroundColor(.black)
-                                    .imageScale(.large)
-                                Text(task.title)
-                                    .foregroundColor(.black)
+        NavigationView {
+            VStack {
+                List {
+                    ScrollViewReader { scrollView in
+                        ForEach(0..<24) { hour in
+                            Section(header: Text("\(hour):00").font(.headline)) {
+                                let tasksForHour = viewModel.tasks.filter { $0.hour == hour }
+                                ForEach(tasksForHour) { task in
+                                    Text(task.title)
+                                }
                             }
+                        }
+                        .onChange(of: viewModel.tasks) { _ in
+                            scrollView.scrollTo(17, anchor: .bottom)
                         }
                     }
                 }
-
-        
-        .navigationTitle(viewModel.selectedDay?.name ?? "")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-            leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Image(systemName: "arrow.left")
-                    .foregroundColor(.black)
-                    .imageScale(.large)
-            },
-            trailing: Button(action: {
-                isAddTaskViewPresented.toggle()
-            }) {
-                Image(systemName: "plus.circle")
-                    .foregroundColor(.black)
-                    .imageScale(.large)
+                .listStyle(PlainListStyle())
+                .padding()
+                .navigationBarTitle(day.name, displayMode: .inline)
+                
+                // Navigationsknappar här
+                .navigationBarItems(
+                    trailing: Button(action: {
+                        isAddTaskViewPresented.toggle()
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .foregroundColor(.black)
+                            .imageScale(.large)
+                    }
+                )
             }
-        )
-        .onAppear {
-            // Hämta uppgifter när vyn visas
-            viewModel.fetchTasks()
-        }
-        .sheet(isPresented: $isAddTaskViewPresented) {
-            AddTaskView(viewModel: AddTaskViewModel(onAddTask: { newTask in
-                viewModel.tasks.append(newTask)
-                isAddTaskViewPresented.toggle()
-            }))
+            
+            .onAppear {
+                // Hämta uppgifter när vyn visas
+                viewModel.fetchTasks()
+            }
+            .sheet(isPresented: $isAddTaskViewPresented) {
+                AddTaskView(viewModel: AddTaskViewModel(onAddTask: { newTask in
+                    viewModel.tasks.append(newTask)
+                }))
+            }
         }
     }
 }
+
+
+
+

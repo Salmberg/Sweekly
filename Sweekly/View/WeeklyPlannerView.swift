@@ -10,37 +10,37 @@ import SwiftUI
 
 struct WeeklyPlannerView: View {
     @ObservedObject var viewModel = WeeklyPlannerViewModel()
-    
+
     var body: some View {
         NavigationView {
-            LazyVGrid(columns: [GridItem(.flexible())], spacing: 16) {
+            LazyVGrid(columns: [GridItem(.flexible())], spacing: 35) {
                 ForEach(viewModel.week.days) { day in
-                    NavigationLink(destination: DailyDetailView(viewModel: DailyDetailViewModel(selectedDay: day))) {
+                    NavigationLink(destination: DailyDetailView(viewModel: DailyDetailViewModel(selectedDay: day), day: day)) {
                         VStack {
-                            Text(day.name)
-                                .foregroundColor(Color.black)
-                            Text(day.formattedDate)
-                                .foregroundColor(Color.red)
-                            
+                            HStack {
+                                Text(day.name)
+                                    .foregroundColor(.black)
+                                Text(day.formattedDate)
+                                    .foregroundColor(dayIsWeekend(day) ? Color.red : Color.black)
+                            }
                         }
                         .frame(maxWidth: .infinity)
                         .aspectRatio(1.0, contentMode: .fit)
-                        .overlay(
-                            Rectangle()
-                                .fill(Color.black)
-                                .frame(height: 2)
-                                .alignmentGuide(.leading, computeValue: { dimension in
-                                    dimension[.leading]
-                                })
-                        )
-                        
+
                     }
+                    Divider().background(Color.black)
                 }
             }
+            .navigationBarHidden(true)
             .padding(16)
-            .navigationTitle("Your Week")
+            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .accentColor(.black)
+    }
+
+    private func dayIsWeekend(_ day: Day) -> Bool {
+        return day.name == "Saturday" || day.name == "Sunday"
     }
 }
 
