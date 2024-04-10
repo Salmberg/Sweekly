@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tabLabel = "Sweekly"
     var body: some View {
         NavigationView {
             VStack {
-                Text(MainTabBar().tabLabel)
+                Text(tabLabel)
                // HomeScreen()
-                MainTabBar()
+                MainTabBar(tabLabel: $tabLabel)
             }
         }
     }
