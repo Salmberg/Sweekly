@@ -11,7 +11,7 @@ import SwiftUI
 struct SweeklyApp: App {
     var body: some Scene {
         WindowGroup {
-            WeeklyPlannerView()
+            ContentView()
         }
     }
 }
