@@ -28,7 +28,7 @@ struct MainTabBar: View {
             
             Text("Flik 3")
                 .tabItem {
-                    Label("Flik 3", systemImage: "3.circle")
+                    Label("Mål", systemImage: "checkmark.circle")
                 }
                 .tag(2)
             
@@ -45,7 +45,7 @@ struct MainTabBar: View {
             case 1:
                 tabLabel = "Veckoplanering"
             case 2:
-                tabLabel = "Flik 3"
+                tabLabel = "Mål"
             case 3:
                 tabLabel = "Konto"
             default:
