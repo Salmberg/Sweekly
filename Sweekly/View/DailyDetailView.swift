@@ -8,10 +8,14 @@
 import SwiftUI
 
 
+import SwiftUI
+
 struct DailyDetailView: View {
     @ObservedObject var viewModel: DailyDetailViewModel
     @Environment(\.presentationMode) var presentationMode
     @State private var isAddTaskViewPresented = false
+    @State private var currentHour: Int = Calendar.current.component(.hour, from: Date())
+    @State private var scrollToHour: Int? = nil
     var day: Day
 
     var body: some View {
@@ -19,16 +23,31 @@ struct DailyDetailView: View {
             VStack {
                 List {
                     ScrollViewReader { scrollView in
-                        ForEach(0..<24) { hour in
+                        ForEach(0..<24, id: \.self) { hour in
                             Section(header: Text("\(hour):00").font(.headline)) {
                                 let tasksForHour = viewModel.tasks.filter { $0.hour == hour }
-                                ForEach(tasksForHour) { task in
-                                    Text(task.title)
+                                
+                                if tasksForHour.isEmpty {
+                                    Text("Inga uppgifter för detta klockslag")
+                                        .foregroundColor(.secondary)
+                                        .italic()
+                                } else {
+                                    ForEach(tasksForHour) { task in
+                                        Text(task.title)
+                                    }
                                 }
                             }
+                            .id(hour)
+                            if hour != 23 {
+                                Divider()
+                            }
                         }
-                        .onChange(of: viewModel.tasks) { _ in
-                            scrollView.scrollTo(17, anchor: .bottom)
+                        .onAppear {
+                            scrollToHour = currentHour
+                            print("Nuvarande klockslag: \(currentHour)")
+                            withAnimation {
+                                scrollView.scrollTo(scrollToHour!, anchor: .top)
+                            }
                         }
                     }
                 }
@@ -36,7 +55,6 @@ struct DailyDetailView: View {
                 .padding()
                 .navigationBarTitle(day.name, displayMode: .inline)
                 
-                // Navigationsknappar här
                 .navigationBarItems(
                     trailing: Button(action: {
                         isAddTaskViewPresented.toggle()
@@ -47,19 +65,24 @@ struct DailyDetailView: View {
                     }
                 )
             }
-            
             .onAppear {
-                // Hämta uppgifter när vyn visas
                 viewModel.fetchTasks()
+                // Starta en Timer som uppdaterar currentHour varje minut
+                Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+                    currentHour = Calendar.current.component(.hour, from: Date())
+                }
             }
             .sheet(isPresented: $isAddTaskViewPresented) {
                 AddTaskView(viewModel: AddTaskViewModel(onAddTask: { newTask in
                     viewModel.tasks.append(newTask)
-                }))
+                }), dailyDetailViewModel: viewModel)
             }
         }
     }
 }
+
+
+
 
 
 
