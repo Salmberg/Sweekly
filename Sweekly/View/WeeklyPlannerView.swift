@@ -31,8 +31,9 @@ struct WeeklyPlannerView: View {
                     Divider().background(Color.black)
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(lightGrayColor)
             .navigationBarHidden(true)
-            .padding(16)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
         }

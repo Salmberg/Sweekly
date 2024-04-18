@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CB25BC142BC68D7100B0CAFE /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25BC132BC68D7100B0CAFE /* MainTabBar.swift */; };
+		CB25BC162BCE807900B0CAFE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25BC152BCE807900B0CAFE /* Colors.swift */; };
+		CB25BC182BCE9A9600B0CAFE /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25BC172BCE9A9600B0CAFE /* HomeScreenView.swift */; };
+		CB25BC1A2BCFB34100B0CAFE /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25BC192BCFB34100B0CAFE /* GoalsView.swift */; };
+		CB25BC1C2BCFB41E00B0CAFE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25BC1B2BCFB41E00B0CAFE /* AccountView.swift */; };
 		CB5DC8312B73F079005DD431 /* SweeklyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8302B73F079005DD431 /* SweeklyApp.swift */; };
 		CB5DC8332B73F079005DD431 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DC8322B73F079005DD431 /* ContentView.swift */; };
 		CB5DC8352B73F07D005DD431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5DC8342B73F07D005DD431 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		CB25BC132BC68D7100B0CAFE /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		CB25BC152BCE807900B0CAFE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CB25BC172BCE9A9600B0CAFE /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		CB25BC192BCFB34100B0CAFE /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		CB25BC1B2BCFB41E00B0CAFE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CB5DC82D2B73F079005DD431 /* Sweekly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sweekly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5DC8302B73F079005DD431 /* SweeklyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweeklyApp.swift; sourceTree = "<group>"; };
 		CB5DC8322B73F079005DD431 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 				CB5DC8342B73F07D005DD431 /* Assets.xcassets */,
 				CB5DC8362B73F07D005DD431 /* Preview Content */,
 				CB25BC132BC68D7100B0CAFE /* MainTabBar.swift */,
+				CB25BC152BCE807900B0CAFE /* Colors.swift */,
 			);
 			path = Sweekly;
 			sourceTree = "<group>";
@@ -180,6 +189,9 @@
 				CB5DC86D2B73F947005DD431 /* DailyDetailView.swift */,
 				CB5DC8712B7558B5005DD431 /* AddTaskView.swift */,
 				CB5DC8752B7A2E98005DD431 /* TaskView.swift */,
+				CB25BC172BCE9A9600B0CAFE /* HomeScreenView.swift */,
+				CB25BC192BCFB34100B0CAFE /* GoalsView.swift */,
+				CB25BC1B2BCFB41E00B0CAFE /* AccountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +329,8 @@
 				CB5DC8722B7558B5005DD431 /* AddTaskView.swift in Sources */,
 				CB5DC8742B7567EF005DD431 /* AddTaskViewModel.swift in Sources */,
 				CB5DC8642B73F5A7005DD431 /* WeeklyPlannerViewModel.swift in Sources */,
+				CB25BC1C2BCFB41E00B0CAFE /* AccountView.swift in Sources */,
+				CB25BC162BCE807900B0CAFE /* Colors.swift in Sources */,
 				CB5DC86E2B73F947005DD431 /* DailyDetailView.swift in Sources */,
 				CB5DC8332B73F079005DD431 /* ContentView.swift in Sources */,
 				CB5DC86A2B73F84D005DD431 /* WeeklyPlannerView.swift in Sources */,
@@ -324,7 +338,9 @@
 				CB5DC8312B73F079005DD431 /* SweeklyApp.swift in Sources */,
 				CB5DC8622B73F532005DD431 /* Task.swift in Sources */,
 				CB5DC8602B73F4E7005DD431 /* Day.swift in Sources */,
+				CB25BC1A2BCFB34100B0CAFE /* GoalsView.swift in Sources */,
 				CB5DC85E2B73F443005DD431 /* Week.swift in Sources */,
+				CB25BC182BCE9A9600B0CAFE /* HomeScreenView.swift in Sources */,
 				CB5DC8702B73FA84005DD431 /* DailyDetailViewModel.swift in Sources */,
 				CB25BC142BC68D7100B0CAFE /* MainTabBar.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ struct MainTabBar: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Hemskärmen")
+            HomeScreenView()              
                 .tabItem {
                     Label("Hem", systemImage: "house")
                 }
@@ -26,13 +26,13 @@ struct MainTabBar: View {
                 }
                 .tag(1)
             
-            Text("Flik 3")
+            GoalsView()
                 .tabItem {
                     Label("Mål", systemImage: "checkmark.circle")
                 }
                 .tag(2)
             
-            Text("Flik 4")
+            AccountView()
                 .tabItem {
                     Label("Konto", systemImage: "person")
                 }
@@ -53,6 +53,11 @@ struct MainTabBar: View {
             }
         }
     }
+}
+
+
+#Preview {
+    MainTabBar(tabLabel: .constant("Hem"))
 }
 
 

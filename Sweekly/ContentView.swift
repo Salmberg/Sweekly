@@ -13,9 +13,9 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Text(tabLabel)
-               // HomeScreen()
                 MainTabBar(tabLabel: $tabLabel)
             }
+            .background(darkBlueAccentColor)
         }
     }
 }
